@@ -43,6 +43,11 @@ This is a Telegram bot for managing personal expenses and income. The bot allows
     ```bash
     export API_KEY="your-telegram-bot-token"
     ```
+    
+    Or create .env file in bot root folder with next content 
+    ```
+    API_KEY=your-telegram-bot-token
+    ```
 
 4. **Run the bot**:
     ```bash
@@ -91,6 +96,7 @@ This is a Telegram bot for managing personal expenses and income. The bot allows
 - `python-telegram-bot`: For Telegram bot interactions
 - `pandas`: For data manipulation and export
 - `xlsxwriter`: For Excel file generation
+- `openpyxl`: For read/write Excel file
 
 Install all dependencies with:
 ```bash
