@@ -41,7 +41,7 @@ This is a Telegram bot for managing personal expenses and income. The bot allows
     Set the `API_KEY` environment variable with your Telegram bot token.  
     For example, on Linux/macOS:
     ```bash
-    export API_KEY="your-telegram-bot-token"
+    export API_KEY=your-telegram-bot-token
     ```
     
     Or create .env file in bot root folder with next content 

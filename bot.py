@@ -74,7 +74,7 @@ async def handle_user_input(update: Update, context: ContextTypes.DEFAULT_TYPE, 
         date = datetime.today().strftime('%d.%m.%Y')
         isExpense = amount < 0
         if isExpense:
-            user_expenses[user_id].append({"type": "expense", "amount": -amount, "category": category, "date": date})
+            user_expenses[user_id].append({"type": "expense", "amount": amount, "category": category, "date": date})
         else:
             user_expenses[user_id].append({"type": "income", "amount": amount, "category": category, "date": date})
 
@@ -149,9 +149,5 @@ if __name__ == "__main__":
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     app.add_error_handler(error_handler)
 
-    while(True):
-        try:
-            print("Бот запущен...")
-            app.run_polling()
-        except Exception as e:
-            print(f"Произошла ошибка при запуске бота, {e}")
+    print("Бот запущен...")
+    app.run_polling()
